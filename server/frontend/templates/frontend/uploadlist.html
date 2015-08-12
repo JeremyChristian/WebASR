@@ -1,0 +1,29 @@
+{% extends 'frontend/base.html' %} 
+{% block content %}
+
+  <body>
+    <div>
+      <h2>Upload List:</h2>
+      <table class="table table-hover">
+        <thead>
+            <tr>
+              <td>Created</td>
+              <td>File</td>
+              <td>Metadata</td>
+              <td>System</td>
+            </tr>
+        </thead>
+        <tbody>
+          {% for upload in data %}
+            <tr>
+              <td>{{upload.created}}</td>
+              <td>{{upload.audiofiles}}</td>
+              <td>{{upload.metadata}}</td>
+              <td>{{upload.systems}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+{% endblock %}
